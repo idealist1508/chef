@@ -1,0 +1,7 @@
+{
+	"run_list": [ 
+	"recipe[vcruntime::vc8]",
+	"recipe[DevEnviroment]",
+        "recipe[vim-windows]"
+	]
+}

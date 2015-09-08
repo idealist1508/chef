@@ -1,0 +1,39 @@
+{
+  "name": "vcruntime",
+  "version": "0.2.0",
+  "description": "Installs Microsoft Visual C++ Runtimes",
+  "long_description": "Microsoft Visual C++ Runtime Cookbook\n=====================================\n\nInstalls Microsoft Visual C++ runtime version 8, 9, 10 or 12 on Windows.\n\nRequirements\n------------\n\n#### Cookbooks\n\n* windows\n\n#### Platforms\n\n* Microsoft Windows 2008 R2\n* Microsoft Windows 2012\n* Microsoft Windows 2012 R2\n\nAttributes\n----------\n\nThere are individual attributes within the attributes files for the URL, checksum and package name of each Visual C++ runtime major and minor version.\n\nIf you wish to install anything except the latest packages, you may set one of\n\n* ```node['vcruntime']['vc9']['version']```\n* ```node['vcruntime']['vc10']['version']```\n* ```node['vcruntime']['vc12']['version']```\n\nto the appropriate version.\n\nUsage\n-----\n\nJust include `vcruntime::vc9`, `vcruntime::vc10`, or vcruntime::vc12 in your node's `run_list`:\n\n```json\n{\n  \"name\": \"my_node\",\n  \"run_list\": [\n    \"recipe[vcruntime::vc9]\"\n  ]\n}\n```\n\nLicense and Authors\n-------------------\n\n* Author:: Yvo Van Doorn (<yvo@getchef.com>)\n* Author:: Dan Robinson (<drobinson@getchef.com>)\n* Author:: Julian Dunn (<jdunn@getchef.com>)\n\n* Copyright (C) 2013 Opscode, Inc.\n* Copyright (C) 2014 Chef Software, Inc.\n\n```text\nLicensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n```\n",
+  "maintainer": "Yvo van Doorn",
+  "maintainer_email": "yvo@opscode.com",
+  "license": "All rights reserved",
+  "platforms": {
+    "windows": ">= 0.0.0"
+  },
+  "dependencies": {
+    "windows": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+    "vcruntime::vc8": ">= 0.0.0",
+    "vcruntime::vc9": ">= 0.0.0",
+    "vcruntime::vc10": ">= 0.0.0",
+    "vcruntime::vc12": ">= 0.0.0"
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+    "vcruntime::vc8": "Visual C++ 2005 runtimes",
+    "vcruntime::vc9": "Visual C++ 2008 runtimes",
+    "vcruntime::vc10": "Visual C++ 2010 runtimes",
+    "vcruntime::vc12": "Visual C++ 2012 runtimes"
+  }
+}
